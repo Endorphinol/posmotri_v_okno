@@ -89,7 +89,7 @@ html {
 }
 
 .search-form__fieldset {
-  align-self: center;
+  align-self: start;
 }
 
 .search-form__fieldset-title {
@@ -119,6 +119,7 @@ html {
 .content__card-link {
   text-decoration: none;
   color: #FFFFFF;
+  margin: 2px;
 }
 
 .content__video-card-title {
@@ -151,12 +152,14 @@ color: #FFFFFF;
 .search-form__label {
   display: flex;
   width: fit-content;
+  align-items: center;
   cursor: pointer;
 }
 
 .search-form__checkbox-list {
   display: flex;
-  margin-top: 10px;
+  justify-content: space-between;
+  margin-top: 5px;
 }
 
 .search-form__textfield {
@@ -168,7 +171,6 @@ color: #FFFFFF;
   font-family: 'Fira Sans Condensed';
   font-weight: 400;
   font-size: 18px;
-  margin-top: 5px;
   width: 225px;
   height: 30px;
   cursor: pointer;
@@ -180,11 +182,11 @@ color: #FFFFFF;
 }
 
 .search-form__textfield:focus-visible {
-  outline: transparent;
+  outline: #FFFFFF;
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: auto;
+  outline: 1px solid #FFFFFF;
 }
 
 .search-form__pseudo-checkbox {
@@ -194,22 +196,20 @@ color: #FFFFFF;
   border-radius: 0;
   margin-right: 5px;
   cursor: pointer;
-  padding: 5px;
-}
-
-.search-form__label-text {
-  margin-right: 15px;
 }
 
 input[type="checkbox"]:checked + span {
   width: 19px;
   height: 19px;
   background-color: #FFFFFF;
-  padding: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
 
+.search-form__label:hover span {
+  text-decoration: underline;
+  color: inherit;
 }
 
 button {
@@ -224,6 +224,18 @@ button {
   background-color: transparent;
 }
 
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 1px solid #FFFFFF;
+}
+
+button:active {
+  box-shadow: 2px 2px #FFFFFF;
+}
+
 .more-button {
   width: 400px;
   height: 35px;
@@ -235,6 +247,25 @@ button {
   justify-self: end;
 }
 
+.content__card-link_current {
+
+}
+
+.content__card-link {
+  display: block;
+}
+
+.content__list-item:focus {
+outline: none;
+}
+
+.content__list-item:focus-visible {
+  outline: 1px solid #FFFFFF;
+}
+
+.content__list-item:active {
+  box-shadow: 2px 2px #FFFFFF;
+}
 h1,
 h2,
 h3,
