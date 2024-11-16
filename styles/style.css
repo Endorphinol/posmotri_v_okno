@@ -7,12 +7,22 @@
 html {
   block-size: 100%;
 }
+ 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
 
 .page {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
-  color: #fff;
+  color: #FFFFFF;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
@@ -33,12 +43,18 @@ html {
   grid-template-columns: 225px 210px 195px;
   align-items: end;
   justify-content: space-between;
+  margin-bottom: 12px;
+  font-family: inherit;
+  height: 54px;
 }
 
 .content__list {
   height: 300px;
   overflow: auto;
-  margin-top: 15px;
+  margin-top: 25px;
+  position: relative;
+  margin-bottom: 10px;
+  font-family: inherit, sans-serif;
 }
 
 .content__details {
@@ -47,8 +63,8 @@ html {
 }
 
 .result__video-container {
-  width: 710px;
-  height: 385px;
+  width: 711px;
+  height: 386px;
   margin-bottom: 15px;
 }
 
@@ -57,6 +73,11 @@ html {
   object-position: center;
   width: 710px;
   height: 385px;
+}
+
+.content__list-item {
+  min-width: 200px;
+  min-height: 101px;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -84,23 +105,20 @@ html {
   position: relative;
 }
 
-.content__list {
-  position: relative;
-}
-
 .search-form__fieldset {
   align-self: start;
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   color: #FFFFFF;
+  margin-bottom: 5px;
 }
 
 .title {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
@@ -109,7 +127,7 @@ html {
 }
 
 .content__accent {
-  font-family: 'Oswald';
+  font-family: inherit;
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
@@ -123,31 +141,28 @@ html {
 }
 
 .content__video-card-title {
-font-family: 'Oswald';
+font-family: inherit;
 font-size: 30px;
 font-weight: 700;
 line-height: 30px;
 color: #FFFFFF;
 text-transform: uppercase;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+width: 200px;
+margin-bottom: 4px;
+margin-top: 2px;
+
 }
 
 .content__video-card-description {
-font-family: 'Fira Sans Condensed';
+font-family: inherit;
 font-size: 18px;
 font-weight: 400;
 line-height: 16.2px;
 color: #FFFFFF;
 }
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-} 
 
 .search-form__label {
   display: flex;
@@ -167,14 +182,15 @@ color: #FFFFFF;
   background-color: transparent;
   border-width: 1px 0px 1px 0px;
   border-style: solid;
-  border-color: #FFFFFF;
-  font-family: 'Fira Sans Condensed';
+  border-color: inherit;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   width: 225px;
-  height: 30px;
+  height: 27px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.7);
+  color: #FFFFFF;
+  word-spacing: -2px;
 }
 
 .search-form__textfield:focus {
@@ -217,12 +233,12 @@ input[type="checkbox"]:checked + span {
 
 button {
   cursor: pointer;
-  font-family: 'Fira Sans Condensed';
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.6px;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid currentColor;
   color: #FFFFFF;
   background-color: transparent;
 }
@@ -256,29 +272,27 @@ button:active {
   justify-self: end;
 }
 
-.content__card-link_current:active {
+.content__card-link_current {
   background-color: rgba(84, 80, 80, 1);
 }
 
 .content__card-link {
   display: block;
+  margin: 2px;
 }
 
-.content__list-item:focus {
+.content__card-link:focus {
  outline: none;
 }
 
-.content__list-item:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #FFFFFF;
 }
 
-.content__list-item:active {
+.content__card-link:active {
   background-color: rgba(84, 80, 80, 1);
 }
 
-.content__video-card-description-container {
-  margin-top: 10px;
-}
 h1,
 h2,
 h3,
