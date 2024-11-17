@@ -28,7 +28,8 @@ html {
   background-color: #1b1919;
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
+  margin-left: 50px;
 }
 
 .content {
@@ -45,7 +46,7 @@ html {
   justify-content: space-between;
   margin-bottom: 12px;
   font-family: inherit;
-  height: 54px;
+  min-height: 54px;
 }
 
 .content__list {
@@ -141,7 +142,7 @@ html {
 }
 
 .content__video-card-title {
-font-family: inherit;
+font-family: 'Oswald', sans-serif;
 font-size: 30px;
 font-weight: 700;
 line-height: 30px;
@@ -283,6 +284,10 @@ button:active {
 
 .content__card-link:focus {
  outline: none;
+}
+
+.content__card-link:hover {
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__card-link:focus-visible {
