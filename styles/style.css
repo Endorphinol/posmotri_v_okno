@@ -35,7 +35,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: end;
-  gap: 15px 30px;
+  gap: 15px 28px;
   min-width: 1140px;
   min-height: 545px;
 }
@@ -47,16 +47,17 @@ html {
   justify-content: space-between;
   margin-bottom: 12px;
   font-family: inherit;
-  min-height: 54px;
+  margin-left: 1px;
 }
 
 .content__list {
   height: 300px;
   overflow: auto;
-  margin-top: 25px;
   position: relative;
-  margin-bottom: 10px;
-  font-family: inherit, sans-serif;
+  font-family: inherit;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  margin-right: 1px;
 }
 
 .content__details {
@@ -68,6 +69,7 @@ html {
   width: 711px;
   height: 386px;
   margin-bottom: 15px;
+  margin-left: 3px;
 }
 
 .result__video {
@@ -89,7 +91,6 @@ html {
 .content__video-card {
   display: flex;
   justify-content: left;
-
 }
 
 .content__video-card-thumbnail {
@@ -134,6 +135,16 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   color: #545050;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.content__accent::after {
+  content: '-';
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+  color: inherit;
 }
 
 .content__card-link {
@@ -143,27 +154,26 @@ html {
 }
 
 .content__video-card-title {
-font-family: 'Oswald', sans-serif;
-font-size: 30px;
-font-weight: 700;
-line-height: 30px;
-color: #FFFFFF;
-text-transform: uppercase;
-text-overflow: ellipsis;
-white-space: nowrap;
-overflow: hidden;
-width: 200px;
-margin-bottom: 4px;
-margin-top: 2px;
-
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
+  margin-bottom: 4px;
+  margin-top: 2px;
 }
 
 .content__video-card-description {
-font-family: inherit;
-font-size: 18px;
-font-weight: 400;
-line-height: 16.2px;
-color: #FFFFFF;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #FFFFFF;
 }
 
 .search-form__label {
@@ -192,7 +202,7 @@ color: #FFFFFF;
   height: 27px;
   cursor: pointer;
   color: #FFFFFF;
-  word-spacing: -2px;
+  word-spacing: -4px;
 }
 
 .search-form__textfield:focus {
@@ -243,6 +253,7 @@ button {
   border: 1px solid currentColor;
   color: #FFFFFF;
   background-color: transparent;
+  margin-right: 1px;
 }
 
 button:hover {
@@ -289,6 +300,7 @@ button:active {
 
 .content__card-link:hover {
   background-color: rgba(84, 80, 80, 1);
+  text-decoration: underline;
 }
 
 .content__card-link:focus-visible {
