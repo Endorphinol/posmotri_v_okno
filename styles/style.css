@@ -29,7 +29,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
 }
 
 .content {
@@ -37,6 +36,8 @@ html {
   justify-content: center;
   align-items: end;
   gap: 15px 30px;
+  min-width: 1140px;
+  min-height: 545px;
 }
 
 .search-form {
